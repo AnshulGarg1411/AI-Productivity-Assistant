@@ -22,19 +22,19 @@ FRONTEND_URL = os.getenv(
     "https://ai-productivity-assistant-smoky.vercel.app"
 )
 
-    DATABASE_URL = os.getenv(
+DATABASE_URL = os.getenv(
         "DATABASE_URL",
-        "postgresql://postgres:anshulgarg@localhost/productivity"
-    )
+         "postgresql://postgres:anshulgarg@localhost/productivity"
+)
 
-    GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
     # AI features (task extraction, morning brief narration) are only
     # attempted when a key is actually present -- the app must keep working
     # perfectly for anyone running it without a GROQ key.
-    AI_FEATURES_ENABLED = bool(GROQ_API_KEY := os.getenv("GROQ_API_KEY")    )
+AI_FEATURES_ENABLED = bool(GROQ_API_KEY := os.getenv("GROQ_API_KEY")    )
 
-    GROQ_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
+GROQ_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
 
 
 settings = Settings()
