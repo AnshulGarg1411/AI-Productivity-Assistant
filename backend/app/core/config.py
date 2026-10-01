@@ -17,7 +17,10 @@ class Settings:
 
     JWT_SECRET = os.getenv("JWT_SECRET")
 
-    FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:5173")
+FRONTEND_URL = os.getenv(
+    "FRONTEND_URL",
+    "https://ai-productivity-assistant-smoky.vercel.app"
+)
 
     DATABASE_URL = os.getenv(
         "DATABASE_URL",
