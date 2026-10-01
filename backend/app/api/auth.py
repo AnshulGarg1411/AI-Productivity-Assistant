@@ -66,8 +66,8 @@ async def callback(
     # the frontend via a redirect, and a dedicated frontend route picks it
     # up from the URL and stores it.
     frontend_redirect = (
-        f"{settings.FRONTEND_URL}/oauth/callback"
-        f"?token={result['access_token']}"
+         "https://ai-productivity-assistant-smoky.vercel.app/oauth/callback"
+         f"?token={result['access_token']}"
     )
 
     return RedirectResponse(url=frontend_redirect)
