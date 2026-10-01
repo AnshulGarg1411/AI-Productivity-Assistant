@@ -52,3 +52,7 @@ typing_extensions==4.15.0
 uritemplate==4.2.0
 urllib3==2.7.0
 uvicorn==0.49.0
+openai
+langchain-openai
+groq
+langchain-groq

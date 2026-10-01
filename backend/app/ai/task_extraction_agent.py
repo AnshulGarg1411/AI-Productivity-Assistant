@@ -14,7 +14,7 @@ from datetime import timedelta
 
 from sqlalchemy.orm import Session
 
-from app.ai.gemini_client import generate_json
+from app.ai.groq_client import generate_json
 from app.core.config import settings
 from app.models.task import Task
 from app.models.email import Email

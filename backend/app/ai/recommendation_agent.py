@@ -13,7 +13,7 @@ this is the only LLM call that touches recommendation text.
 """
 import logging
 
-from app.ai.gemini_client import generate_json
+from app.ai.groq_client import generate_json
 from app.core.config import settings
 from app.schemas.dashboard_schema import RecommendationResponse
 

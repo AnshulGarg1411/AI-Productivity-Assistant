@@ -12,7 +12,7 @@ import logging
 
 from sqlalchemy.orm import Session
 
-from app.ai.gemini_client import generate_json
+from app.ai.groq_client import generate_json
 from app.core.config import settings
 from app.models.email import Email
 

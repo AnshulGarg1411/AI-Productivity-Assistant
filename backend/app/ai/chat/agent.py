@@ -43,12 +43,12 @@ def _get_model():
         return None
 
     try:
-        from langchain_google_genai import ChatGoogleGenerativeAI
+        from langchain_groq import ChatGroq
 
-        return ChatGoogleGenerativeAI(
-            model=settings.GEMINI_MODEL,
-            google_api_key=settings.GEMINI_API_KEY,
-            temperature=0.3,
+        return ChatGroq(
+              model="openai/gpt-oss-120b",
+              temperature=0.2,
+              max_tokens=700
         )
     except Exception:
         logger.exception("Failed to initialize chat model")

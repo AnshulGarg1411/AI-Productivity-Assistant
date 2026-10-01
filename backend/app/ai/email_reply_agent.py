@@ -7,7 +7,7 @@ would be wasted cost.
 """
 import logging
 
-from app.ai.gemini_client import generate_text
+from app.ai.groq_client import generate_text
 from app.core.config import settings
 from app.models.email import Email
 

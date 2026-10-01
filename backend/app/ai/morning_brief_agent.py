@@ -17,7 +17,7 @@ it can only make it sound nicer.
 """
 import logging
 
-from app.ai.gemini_client import generate_json
+from app.ai.groq_client import generate_json
 from app.core.config import settings
 
 logger = logging.getLogger("app.ai")

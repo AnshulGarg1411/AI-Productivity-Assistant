@@ -24,14 +24,14 @@ class Settings:
         "postgresql://postgres:anshulgarg@localhost/productivity"
     )
 
-    GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+    GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
     # AI features (task extraction, morning brief narration) are only
     # attempted when a key is actually present -- the app must keep working
-    # perfectly for anyone running it without a Gemini key.
-    AI_FEATURES_ENABLED = bool(GEMINI_API_KEY)
+    # perfectly for anyone running it without a GROQ key.
+    AI_FEATURES_ENABLED = bool(GROQ_API_KEY := os.getenv("GROQ_API_KEY")    )
 
-    GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+    GROQ_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
 
 
 settings = Settings()
